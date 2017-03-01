@@ -27,8 +27,8 @@ var preventViewScroll = function (classes) {
         ele.scrollTop = o - 1
       }
     })
-		
-	// 如果滚动条不在顶部，且不在底部，则不作处理；否则，阻止 move.
+    
+  // 如果滚动条不在顶部，且不在底部，则不作处理；否则，阻止 move.
     ele.addEventListener('touchmove', function (e) {
       ele.offsetHeight < ele.scrollHeight && (e._isScroller = !0)
     })
@@ -45,6 +45,6 @@ var preventViewScroll = function (classes) {
 ```
 
 ### demo
-
+请在微信中打开： <http://lzwai.me/preventViewScroll/example.html>
 
 
