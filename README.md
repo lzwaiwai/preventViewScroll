@@ -38,6 +38,10 @@ var preventViewScroll = function (classes) {
   dom && prevent(dom)
 
   document.body.addEventListener('touchmove', function (e) {
+    var target = e.target || e.currentTarget
+    if (target.className.indexOf('prevent-view-scroll') !== -1) { // 对于 class 包含 prevent-view-scroll 的元素，不做处理
+      return
+    }
     e._isScroller || e.preventDefault()
   })
 }
